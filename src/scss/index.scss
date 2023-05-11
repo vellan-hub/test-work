@@ -1,0 +1,8 @@
+@import 'main/base/variables';
+@import 'main/base/mixins';
+
+//стили блоков
+@import '../blocks/sidebar-filter/sidebar-filter';
+@import '../blocks/movies-catalog/movies-catalog';
+@import '../blocks/movie-card/movie-card';
+@import '../scss/main/vendors/ui';

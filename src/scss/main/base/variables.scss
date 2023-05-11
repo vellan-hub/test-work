@@ -1,0 +1,119 @@
+//fonts
+$font-primery: TTNorms, sant-serif;
+
+//new
+
+//colors
+$white: #fff;
+$gray: #667085;
+
+//site colors
+$color-background-light: $white;
+
+$color-text-gray: $gray;
+
+//new end
+
+//colors
+$red: #ec2028;
+$red-dark: #e1252d;
+
+$black: #000000;
+$black-text: #303030;
+$dark: #2d2d2d;
+$gray-black: #b7acac;
+
+$gray-dark: #eaeaea;
+
+
+//site colors
+$color-text-dark: $black-text;
+$color-text-light: $white;
+$color-text-red: $red;
+
+$color-text-dark-hover: $red;
+
+$color-background-dark: $dark;
+$color-background-gray: $gray;
+$color-background-red: $red;
+
+$color-button-red: $red;
+$color-button-gray: $gray;
+
+$color-button-red-hover: $red-dark;
+$color-button-gray-hover: $gray-dark;
+
+
+
+// desktop first breakpoints
+$break_xxl : 1920px;
+$break_xxlg : 1700px;
+$break_xlg : 1365px;
+$break_xd : 1270px;
+$break_ld : 1120px;
+$break_lg : 1024px;
+$break_md : 920px;
+$break_smd : 800px;
+$break_sm : 768px;
+$break_xs : 480px;
+
+// media queries mixins
+@mixin xxl {
+    @media screen and (max-width: $break_xxl) {
+        @content;
+    }
+}
+
+@mixin xxlg {
+    @media screen and (max-width: $break_xxlg) {
+        @content;
+    }
+}
+
+@mixin xlg {
+    @media screen and (max-width: $break_xlg) {
+        @content;
+    }
+}
+
+@mixin xd {
+    @media screen and (max-width: $break_xd) {
+        @content;
+    }
+}
+
+@mixin ld {
+    @media screen and (max-width: $break_ld) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width: $break_lg) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: $break_md) {
+        @content;
+    }
+}
+
+@mixin smd {
+    @media screen and (max-width: $break_smd) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width: $break_sm) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media screen and (max-width: $break_xs) {
+        @content;
+    }
+}

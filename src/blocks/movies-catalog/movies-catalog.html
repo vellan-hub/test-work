@@ -1,0 +1,118 @@
+<section class="movies__catalog">
+  <div class="container">
+    <div class="catalog__wrapper">
+
+      @@include('../sidebar-filter/sidebar-filter.html', {})
+      
+      <div class="card-list__wrapper">
+        <div class="sort__wrapper">
+          <p class="sort__title">Сортировка:</p>
+          <div class="sort__list-wrapper">
+            <div class="sort__list-title-wrapper">
+              <p class="sort__list-title">По умолчанию</p>
+              <svg
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 6.5L6 1.5L1 6.5"
+                  stroke="#98A2B3"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="sort__list">
+              <li>
+                <a href="" class="current">По умолчанию</a>
+              </li>
+              <li>
+                <a href="">
+                  По стоимости
+                  <svg
+                    width="18"
+                    height="16"
+                    viewBox="0 0 18 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.1667 1.3335V14.6668M13.1667 14.6668L9.83333 11.3335M13.1667 14.6668L16.5 11.3335M4.83333 14.6668V1.3335M4.83333 1.3335L1.5 4.66683M4.83333 1.3335L8.16667 4.66683"
+                      stroke="#667085"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  >По дате выхода
+                  <svg
+                    width="18"
+                    height="16"
+                    viewBox="0 0 18 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.1667 1.3335V14.6668M13.1667 14.6668L9.83333 11.3335M13.1667 14.6668L16.5 11.3335M4.83333 14.6668V1.3335M4.83333 1.3335L1.5 4.66683M4.83333 1.3335L8.16667 4.66683"
+                      stroke="#667085"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog-list">
+          @@include('../movie-card/movie-card.html', {})
+          <div class="movie-card">
+            <a href="single-movie.html" class="img__wrapper">
+              <img src="@img/dragons.png" alt="">
+            </a>
+            <div class="movie-card__description">
+              <a href="single-film.html" class="title">Зеленая миля Зеленая миля Зеленая миляЗеленая миля</a>
+              <ul class="tags__list">
+                <li>
+                  <a href="">драма</a>
+                </li>
+                <li>
+                  <a href="">фэнтези</a>
+                </li>
+                <li>
+                  <a href="">криминал</a>
+                </li>
+                <li>
+                  <a href="">драма</a>
+                </li>
+                <li>
+                  <a href="">фэнтези</a>
+                </li>
+                <li>
+                  <a href="">криминал</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          @@include('../movie-card/movie-card.html', {})
+          @@include('../movie-card/movie-card.html', {})
+          @@include('../movie-card/movie-card.html', {})
+          @@include('../movie-card/movie-card.html', {})
+          @@include('../movie-card/movie-card.html', {})
+          @@include('../movie-card/movie-card.html', {})
+          @@include('../movie-card/movie-card.html', {})
+          @@include('../movie-card/movie-card.html', {})
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

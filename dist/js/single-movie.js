@@ -1,0 +1,1 @@
+(()=>{"use strict";let e=document.querySelector(".movie-description__wrapper .description__list .description .cost"),t=e.innerText;e&&(e.innerText=t.toString().replace(/\B(?=(\d{3})+(?!\d))/g," "))})();

@@ -1,0 +1,82 @@
+h1 {
+  font-family: CormorantSC, sans-serif;
+  font-size: 64px;
+  line-height: 78px;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include lg {
+    font-size: 48px;
+    line-height: 56px;
+    text-transform: none;
+  }
+}
+
+.section__title {
+  font-family: $font-primery;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #1B2124;
+  @include sm {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+}
+
+.section__description {
+  font-size: 20px;
+  line-height: 32px;
+  @include lg {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.title-h1 {
+  font-family: CormorantSC, sans-serif;
+  font-size: 64px;
+  line-height: 78px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 48px;
+  position: relative;
+
+  @include lg {
+    font-size: 48px;
+    line-height: 56px;
+    text-transform: none;
+    padding-bottom: 24px;
+  }
+
+  .seperator {
+    padding-left: 176px;
+
+    @include xlg {
+      padding-left: 140px;
+    }
+
+    @include lg {
+      padding-left: 0;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 176px;
+    width: 164px;
+    height: 2px;
+    background-color: #BA7043;
+
+    @include xlg {
+      left: 140px;
+    }
+
+    @include lg {
+      left: 0;
+    }
+  }
+}

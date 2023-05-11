@@ -1,0 +1,20 @@
+//font
+@mixin font ($size: 1em, $weight: 400, $height: normal, $spacing: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin pseudo {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@mixin square ($width: 10px, $height: $width) {
+  width: $width;
+  height: $height;
+}

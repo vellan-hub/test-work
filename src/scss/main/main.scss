@@ -1,0 +1,15 @@
+//base
+@import 'base/variables'; //переменные
+@import 'base/mixins'; //миксины (часто используемые участки кода)
+@import 'base/layouts'; //основные сетки
+@import 'base/fonts'; //шрифты
+@import 'base/base'; //нормализатор и стили для body
+
+//components
+@import 'components/text'; //стили текста
+@import 'components/buttons'; //стили кнопок и ссылок, как кнопок
+@import 'components/links'; //стили ссылок
+@import 'components/form'; //стили элементов формы
+
+//vendors
+@import 'vendors/swiper'; //базовые стили слайдера (из коробки)

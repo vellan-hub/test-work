@@ -1,0 +1,33 @@
+//reset
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+}
+
+//стили body
+
+body {
+  font-family: $font-primery;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1B2124;
+  scroll-behavior: smooth;
+}

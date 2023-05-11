@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('blocks/head/head.html', {
+    'title': 'Фильм',
+    'style': 'single-movie'
+  })
+  <body>
+    @@include('blocks/header/header.html', {})
+
+    <main>
+
+      @@include('blocks/movie-page/movie-page.html', {})
+       
+    </main>
+
+    @@include('blocks/footer/footer.html', {
+      'script': 'single-movie'
+    })
+  </body>
+</html>

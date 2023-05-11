@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог фильмов</title>
+  <link rel="stylesheet" href="css/header.min.css?_v=20230511170502">
+  <link rel="stylesheet" href="css/index.min.css?_v=20230511170502">
+  <link rel="stylesheet" href="css/footer.min.css?_v=20230511170502">
+</head>
+
+  <body>
+    <header>
+  <div class="container">
+    <div class="header__wrapper">
+      <a class="button_green" href="/">На главную</a>
+    </div>
+  </div>
+</header>
+
+    <main>
+
+      <section class="movies__catalog">
+  <div class="container">
+    <div class="catalog__wrapper">
+
+      <aside class="sidebar-filter">
+  <form class="form__filter" action="">
+    <div class="filter">
+      <div class="filter__wrapper main-filter__wrapper">
+        <svg
+          width="20"
+          height="16"
+          viewBox="0 0 20 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 4L13 4M13 4C13 5.65686 14.3431 7 16 7C17.6569 7 19 5.65685 19 4C19 2.34315 17.6569 1 16 1C14.3431 1 13 2.34315 13 4ZM7 12L19 12M7 12C7 13.6569 5.65685 15 4 15C2.34315 15 1 13.6569 1 12C1 10.3431 2.34315 9 4 9C5.65685 9 7 10.3431 7 12Z"
+            stroke="#101828"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <p class="main-filter__title">Фильтр</p>
+      </div>
+      <div class="filter__buttons">
+        <input class="button_green" type="submit" value="Подобрать" />
+      </div>
+
+      <div class="filter__wrapper filter-range_wrapper">
+				<div class="filter__header active">
+					<p class="filter__title">Стоимость</p>
+					<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11 6.5L6 1.5L1 6.5" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</div>
+				<div class="filter__variations">
+					<div class="values">
+						<input class="rangeValue" type="number" name="" value="45000000" id="min_price_inp" min="45000000" max="87000000">
+						<span>-</span>
+						<input class="rangeValue" type="number" name="" value="87000000" id="max_price_inp" min="45000000" max="87000000">
+					</div>
+					<div class="price-range-wrap">
+						<div class="price-range" data-min="45000000" data-max="87000000"></div>
+						<div class="range-slider">
+							<input type="hidden" id="min_price" name="min_price" value="">
+							<input type="hidden" id="max_price" name="max_price" value="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+      <div class="filter__wrapper dates-filter">
+        <div class="filter__header active">
+          <p class="filter__title">Дата релиза</p>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 6.5L6 1.5L1 6.5" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="filter__variations">
+          <div class="values">
+            <input type="date" name="min_date" id="min_date" value="1972-03-24" min="1972-03-24" max="2023-03-30">
+            <span>-</span>
+            <input type="date" name="max_date" id="max_date" value="2023-03-30" min="1972-03-24" max="2023-03-30">
+          </div>
+        </div>
+      </div>
+
+      <div class="filter__wrapper">
+        <div class="filter__header active">
+          <p class="filter__title">Жанры</p>
+          <svg
+            width="12"
+            height="8"
+            viewBox="0 0 12 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 6.5L6 1.5L1 6.5"
+              stroke="#98A2B3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="filter__variations variations__checkbox">
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="drama" id="drama" />
+            <label for="drama">Драма</label>
+          </div>
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="fantasy" id="fantasy" />
+            <label for="fantasy">Фэнтези</label>
+          </div>
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="crime" id="crime" />
+            <label for="crime">Криминал</label>
+          </div>
+        </div>
+      </div>
+      <div class="filter__wrapper">
+        <div class="filter__header active">
+          <p class="filter__title">Страны</p>
+          <svg
+            width="12"
+            height="8"
+            viewBox="0 0 12 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 6.5L6 1.5L1 6.5"
+              stroke="#98A2B3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="filter__variations variations__checkbox">
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="USA" id="USA" />
+            <label for="USA">США</label>
+          </div>
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="Britain" id="Britain" />
+            <label for="Britain">Британия</label>
+          </div>
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="China" id="China" />
+            <label for="China">Китай</label>
+          </div>
+        </div>
+      </div>
+      <div class="filter__wrapper">
+        <div class="filter__header active">
+          <p class="filter__title">Актёры</p>
+          <svg
+            width="12"
+            height="8"
+            viewBox="0 0 12 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 6.5L6 1.5L1 6.5"
+              stroke="#98A2B3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="filter__variations variations__checkbox">
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="Tom" id="Tom" />
+            <label for="Tom">Том Хэнкс</label>
+          </div>
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="Devid" id="Devid" />
+            <label for="Devid">Дэвид Морс</label>
+          </div>
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="Bonnie" id="Bonnie" />
+            <label for="Bonnie">Бонни Хант</label>
+          </div>
+          <div class="checkbox__wrapper">
+            <input type="checkbox" name="Bonnie" id="Bonnie" />
+            <label for="Bonnie">Майкл Кларк Дункан</label>
+          </div>
+        </div>
+      </div>
+      <div class="filter__buttons">
+        <input class="button_green" type="submit" value="Подобрать" />
+        <input class="button_white" type="reset" value="Очистить фильтр" />
+      </div>
+    </div>
+  </form>
+</aside>
+      
+      <div class="card-list__wrapper">
+        <div class="sort__wrapper">
+          <p class="sort__title">Сортировка:</p>
+          <div class="sort__list-wrapper">
+            <div class="sort__list-title-wrapper">
+              <p class="sort__list-title">По умолчанию</p>
+              <svg
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 6.5L6 1.5L1 6.5"
+                  stroke="#98A2B3"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="sort__list">
+              <li>
+                <a href="" class="current">По умолчанию</a>
+              </li>
+              <li>
+                <a href="">
+                  По стоимости
+                  <svg
+                    width="18"
+                    height="16"
+                    viewBox="0 0 18 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.1667 1.3335V14.6668M13.1667 14.6668L9.83333 11.3335M13.1667 14.6668L16.5 11.3335M4.83333 14.6668V1.3335M4.83333 1.3335L1.5 4.66683M4.83333 1.3335L8.16667 4.66683"
+                      stroke="#667085"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  >По дате выхода
+                  <svg
+                    width="18"
+                    height="16"
+                    viewBox="0 0 18 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.1667 1.3335V14.6668M13.1667 14.6668L9.83333 11.3335M13.1667 14.6668L16.5 11.3335M4.83333 14.6668V1.3335M4.83333 1.3335L1.5 4.66683M4.83333 1.3335L8.16667 4.66683"
+                      stroke="#667085"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog-list">
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+            <a href="single-movie.html" class="img__wrapper">
+              <img src="img/dragons.png" alt="">
+            </a>
+            <div class="movie-card__description">
+              <a href="single-film.html" class="title">Зеленая миля Зеленая миля Зеленая миляЗеленая миля</a>
+              <ul class="tags__list">
+                <li>
+                  <a href="">драма</a>
+                </li>
+                <li>
+                  <a href="">фэнтези</a>
+                </li>
+                <li>
+                  <a href="">криминал</a>
+                </li>
+                <li>
+                  <a href="">драма</a>
+                </li>
+                <li>
+                  <a href="">фэнтези</a>
+                </li>
+                <li>
+                  <a href="">криминал</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+          <div class="movie-card">
+  <a href="single-movie.html" class="img__wrapper">
+    <img src="img/green-mile.jpg" alt="">
+  </a>
+  <div class="movie-card__description">
+    <a href="single-movie.html" class="title">Зеленая миля</a>
+    <ul class="tags__list">
+      <li>драма</li>
+      <li>фэнтези</li>
+      <li>криминал</li>
+    </ul>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+       
+    </main>
+
+    <footer></footer>
+
+<script src="js/header.js?_v=20230511170502" defer></script>
+<script src="js/index.js?_v=20230511170502" defer></script>
+<script src="js/footer.js?_v=20230511170502" defer></script>
+
+  </body>
+</html>

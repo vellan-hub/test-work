@@ -1,0 +1,21 @@
+[class="container"] {
+  max-width: 1440px;
+  padding: 0 48px;
+  margin: 0 auto;
+  @include lg {
+    padding: 0 24px;
+  }
+  @include sm {
+    padding: 0 20px;
+  }
+}
+
+.section {
+  padding-bottom: 80px;
+  @include lg {
+    padding-bottom: 64px;
+  }
+  @include sm {
+    padding-bottom: 44px;
+  }
+}

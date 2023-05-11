@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('blocks/head/head.html', {
+    'title': 'Каталог фильмов',
+    'style': 'index'
+  })
+  <body>
+    @@include('blocks/header/header.html', {})
+
+    <main>
+
+      @@include('blocks/movies-catalog/movies-catalog.html', {})
+       
+    </main>
+
+    @@include('blocks/footer/footer.html', {
+      'script': 'index'
+    })
+  </body>
+</html>
